@@ -10,6 +10,13 @@ module.exports = function( controller ) {
         await bot.reply( message, { markdown: '> How can I help you?**\n> - Programs\n> - Incentives\n> - Partner status\n> - Profile settings' } );
         await bot.reply( message, { markdown: 'Or type `help` to see all available commands' } );
       });
+    
+     controller.hears( [ 'Wassup' ], 'message,direct_message', async ( bot,message ) => {
+
+        await bot.reply( message,'Greetings! I am here to help!' );
+        await bot.reply( message, { markdown: '> How can I help you?**\n> - Programs\n> - Incentives\n> - Partner status\n> - Profile settings' } );
+        await bot.reply( message, { markdown: 'Or type `help` to see all available commands' } );
+      });
 
 
     controller.hears( 'happy boy', 'message,direct_message', async ( bot,message ) => {
@@ -17,6 +24,13 @@ module.exports = function( controller ) {
         await bot.reply( message, {
             text: 'Aww!',
             files: [ 'https://i.pinimg.com/280x280_RS/b0/0e/49/b00e4959dd26367688099678376d4296.jpg' ]
+        });
+        
+    controller.hears( 'god', 'message,direct_message', async ( bot,message ) => {
+
+        await bot.reply( message, {
+            text: 'I felt extremely uncomfortable as the focal point, in the spotlight. I really like the behind the scenes role, because all my freedom is there - Brian Eno',
+            files: [ 'https://needled.files.wordpress.com/2013/03/eno3.jpg' ]
         });
     })
 
