@@ -5,7 +5,7 @@ var fs = require('fs');
 module.exports = function( controller ) {
 
     controller.hears( [ 'hi','hello','howdy','hey','aloha','hola','bonjour','oi','hallo'], 'message,direct_message', async ( bot,message ) => {
-
+ 
         await bot.reply( message,'Greetings! I am here to help!' );
         await bot.reply( message, { markdown: '> How can I help you?**\n> - Programs\n> - Incentives\n> - Partner status\n> - Profile settings' } );
         await bot.reply( message, { markdown: 'Or type `help` to see all available commands' } );
